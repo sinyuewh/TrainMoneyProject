@@ -1,0 +1,7 @@
+﻿select * from linestation inner join
+(
+select Astation,Bstation,count(*) from linestation where direction='0'
+group by Astation,Bstation having count(*)>1 ) b
+ on linestation.astation=b.astation and linestation.bstation=b.bstation
+ 
+ order by b.astation,b.bstation

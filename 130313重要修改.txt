@@ -1,0 +1,27 @@
+==================增加动车车型的调整方法=======================
+1、select t.*, t.rowid from hightrainprofile t order by ID
+  在表hightrainprofile中增加数据 300公里车型 CRH380B和CRH380BL
+
+或者执行下列SQL语句
+insert into HIGHTRAINPROFILE (ID, MILETYPE, HIGHTRAINTYPE, PCOUNT1, RATE1, PCOUNT2, RATE2, PCOUNT3, RATE3, PCOUNT4, RATE4, RATE31, SPEED, WEIGHT, PRICE, COST1, COST2, COST3, COST21, COST22, SPEED2, SPEED3, PCOUNT5, RATE5)
+values (8, '300公里', 'CRH380B', 107, .7733, 373, .4833, 0, 0, 0, 0, 0, 120, 432, 19600, 355, 450, 145, 1700, 2800, 145, 260, 0, 0);
+
+insert into HIGHTRAINPROFILE (ID, MILETYPE, HIGHTRAINTYPE, PCOUNT1, RATE1, PCOUNT2, RATE2, PCOUNT3, RATE3, PCOUNT4, RATE4, RATE31, SPEED, WEIGHT, PRICE, COST1, COST2, COST3, COST21, COST22, SPEED2, SPEED3, PCOUNT5, RATE5)
+values (9, '300公里', 'CRH380BL', 157, .7733, 838, .4833, 0, 0, 22, 1.5466, 0, 120, 964, 39200, 710, 900, 290, 3400, 5600, 145, 260, 0, 0);
+
+2、表TRAINLINE中增加字段 SpringWinter varchar2(10) 字段
+==============================================================
+
+2、调整动车的车厢配置 在收入相关配置--->>动车车厢配置中调整(3)
+   
+3、调整动车的电网和接触网使用费 在支出相关配置--->>电网和接触网使用费(3)
+
+4、更新人员工资及附加费，在支出相关配置--->>人员工资及附加费(7) 
+
+5、更新车辆采购价格表和线路速度 ，在支出相关配置--->>车辆采购价格表(8)
+
+6、更新车辆日常检修费 ，在支出相关配置--->>车辆日常检修费(9)
+
+7、更新车辆定期检修费，在支出相关配置--->> 车辆定期检修费(10) 
+
+8、更新车辆客运消耗备用备品费，在支出相关配置 --->>车辆客运消耗备用备品费(11)

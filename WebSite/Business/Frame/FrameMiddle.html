@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+
+<script language="JavaScript" type="text/javascript"> 
+
+function HiddenBar()
+{ 
+    if (document.getElementById("wpic").value=="1")
+    { 
+        document.getElementById("wpic").src="../images/setleft.jpg";
+        document.getElementById("wpic").value="2";
+        document.getElementById("wpic").title="展开菜单导航栏";
+        window.top.document.getElementById("Frmid").cols="19,0,*,20"; 
+    } 
+    else
+    { 
+        document.getElementById("wpic").src="../images/setreight.jpg"; 
+        document.getElementById("wpic").value="1"; 
+        document.getElementById("wpic").title="折叠菜单导航栏";
+        window.top.document.getElementById("Frmid").cols="19,200,*,20"; 
+    } 
+} 
+</script>
+
+<body bgcolor="EDF7FF" style="margin-top: 2px; margin-left: 0pt">
+    <table align="left" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"
+        id="Table1">
+        <tr>
+            <td align="right">
+                <a href="#" onclick="HiddenBar();" id="Alink1" title="折叠菜单导航栏">
+                    <img id="wpic" name="wpics" src="../images/setreight.jpg" width="13" height="13"
+                        border="0" value="1" /></a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

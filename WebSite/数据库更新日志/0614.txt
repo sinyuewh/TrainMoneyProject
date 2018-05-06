@@ -1,0 +1,16 @@
+﻿在表 PERSONGZ 中增加 
+  GL	VARCHAR2(1)	Y			
+
+
+增加视图
+create View TrainPersonGZView as
+ select trainperson.*,GZ,FJ,QTFY,GL from trainperson inner join persongz
+  on trainperson.kind=persongz.kind and trainperson.gw=persongz.gw
+  
+ 在表中增加数据 PROFILEGROUP
+ 16	37	列车检备率	/TrainWeb/SystemProfile/Fee16_JianBeiLv.aspx	1	
+ 
+ 在配置表中增加
+ 动车检备率
+ 列车检备率
+ 的数据。

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessRule", "BusinessRule\BusinessRule.csproj", "{AEBAF67C-5457-4CAB-967B-0D0A5AB01C29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{371E8C18-0DED-4E29-97AA-509E91C72067}"
+EndProject
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "DbProject", "DbProject\DbProject.dbp", "{929EF0AC-9927-4885-B27E-CFF5F22F8247}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEBAF67C-5457-4CAB-967B-0D0A5AB01C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEBAF67C-5457-4CAB-967B-0D0A5AB01C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEBAF67C-5457-4CAB-967B-0D0A5AB01C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEBAF67C-5457-4CAB-967B-0D0A5AB01C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{371E8C18-0DED-4E29-97AA-509E91C72067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371E8C18-0DED-4E29-97AA-509E91C72067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371E8C18-0DED-4E29-97AA-509E91C72067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371E8C18-0DED-4E29-97AA-509E91C72067}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+﻿在表 CHANGJIAOQYFEE 中 增加了字段 CHECKFLAG nvarchar2(1)	Y	

@@ -1,0 +1,97 @@
+﻿/*1--------信息提示表格--------*/
+table.InfoTips       
+{
+	width: 99%;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+table.InfoTips td.Spar
+{
+	height:4pt;
+	background-color:#CCE8FF
+}
+
+/*2 -----------------------------*/
+table.InfoSearch
+{
+	border:solid 1pt #7CB1B5;
+	width:99%;
+}
+
+/*3-----------------------------*/
+Table.ListTable
+{
+	 background-color:#ADDAFF;
+	 border:solid 0pt white;
+	 width: 99%; 
+	 margin-top: 5px;
+}
+
+Table.ListTable Td.Caption
+{
+	 height:25px;
+	 vertical-align:middle;
+	 background-color:#CCE8FF;
+	 font-weight:bold;
+	 text-align:center;
+}
+
+Table.ListTable Td.Caption_Left
+{
+	 height:25px;
+	 vertical-align:middle;
+	 background-color:#CCE8FF;
+	 font-weight:bold;
+	 text-align:left;
+	 padding-left:3px;
+}
+
+Table.ListTable Td.Caption_Right
+{
+	 height:25px;
+	 vertical-align:middle;
+	 background-color:#CCE8FF;
+	 font-weight:bold;
+	 text-align:right;
+	 padding-right:3px;
+}
+
+/*--------------------------------------------------*/
+Table.ListTable Td.Data
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#EDF7FF;
+	 text-align:center;
+	 word-break:break-all;
+}
+
+Table.ListTable Td.Data_Left
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#EDF7FF;
+	 text-align:left;
+	 padding-left:3px;
+	 word-break:break-all;
+}
+
+Table.ListTable Td.Data_Right
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#EDF7FF;
+	 text-align:right;
+	 padding-right:3px;
+	 word-break:break-all;
+}
+
+/*------------------------------------------------*/
+
+Div.ButtonArea
+{
+	 text-align:center;
+	 padding-top:5;
+	 padding-bottom:5;
+	
+}

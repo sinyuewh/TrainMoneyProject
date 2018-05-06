@@ -1,0 +1,77 @@
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landr?              |
+|--------------------------------------------------*/
+
+.dtree {
+	
+	white-space: nowrap;
+	text-align:left;
+}
+.dtree img {
+	border: 0px;
+}
+.dtree a {
+	color: #333;
+	text-decoration: none;
+	font-size:11pt;
+	height:18;
+}
+.dtree a.node, .dtree a.nodeSel {
+	white-space: nowrap;
+	padding:2px 2px 2px 2px;
+	font-size:11pt;
+	height:18;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+	color: #333;
+	text-decoration: underline;
+	font-size:11pt;
+	height:18;
+}
+.dtree a.nodeSel {
+	background-color: #c0d2ec;
+	font-size:11pt;
+	height:18;
+}
+.dtree .clip {
+	overflow: hidden;
+	font-size:11pt;
+}
+
+/*------------×Ô¶¨Òå--------------------------------*/
+body
+ {
+     font-size: 11pt;
+     margin-left: 0px;
+     margin-top: 0px;
+     margin-right: 0px;
+     margin-bottom: 0px;
+     background-color: #f0f8ff;
+     overflow: auto;
+     color: #000000;
+     border: solid 0px black;
+     height: 100%;
+     scrollbar-face-color: #d3d3d3;
+     scrollbar-shadow-color: #F3F4F4;
+     scrollbar-highlight-color: #F3F4F4;
+     scrollbar-3dlight-color: #F3F4F4;
+     scrollbar-darkshadow-color: #F3F4F4;
+     scrollbar-track-color: #F3F4F4;
+     scrollbar-arrow-color: #F3F4F4;
+ }
+ .MenuDiv
+ {
+     background-color: #f0f8ff;
+     border: 1px solid silver;
+     overflow: auto;
+     height: 99%;
+     width: 98%;
+     margin-top: 1pt;
+ }
+ td.MenuCaption
+ {
+     text-align: center;
+     background-image: url("/App_Themes/Designer/images/bg_frameheader.gif");
+ }

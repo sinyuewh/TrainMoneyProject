@@ -1,0 +1,53 @@
+﻿在表 中 增加了字段 LINESTATION
+SHIPFLAG	VARCHAR2(1)	Y	--轮渡费标志	
+
+
+在表BIGSTATION中增加了字段
+FEE1	INTEGER	Y			
+FEE2	INTEGER	Y			
+FEE3	INTEGER	Y			
+FEE4	INTEGER	Y	
+
+在LineStation中增加了字段
+FEE1	INTEGER	Y			
+FEE2	INTEGER	Y			
+FEE3	INTEGER	Y	
+
+
+修改了视图linestationview
+create or replace view linestationview as
+select LINESTATION."ID",linestation.fee1,linestation.fee2,linestation.fee3,linestation.shipflag,
+bigstationlist.name1 aname1,
+b2.name1 bname1,
+LINESTATION."LINEID",LINESTATION."NUM",LINESTATION."DQH",LINESTATION."ASTATION",LINESTATION."BSTATION",LINESTATION."MILES",
+LINESTATION."MILESCLASS",LINESTATION."DIRECTION",LINESTATION."JNFLAG",TRAINLINE.LineType,TRAINLINE.LineName
+   from LINESTATION inner join TRAINLINE on LineStation.LineID=TRAINLINE.LineID
+   left outer join bigstationlist on linestation.astation=bigstationlist.name1
+   left outer join bigstationlist b2 on linestation.bstation=b2.name1		
+   
+   
+   
+增加了视图
+create or replace view bigstationview as
+select BIGSTATIONLIST."DATAID",BIGSTATIONLIST."NUM",BIGSTATIONLIST."PARENTNUM",BIGSTATIONLIST."NAME1",Fee1,fee2,Fee3 from  BIGSTATIONLIST inner join BIGSTATION
+on BIGSTATIONLIST.PARENTNUM=BIGSTATION.num
+
+在表中插入了配置数据
+1、空调客车轮渡费
+2、非空调客车轮渡费
+
+3、直供电内燃牵引附加费
+4、直供电电力牵引附加费
+
+在表NEWTRAINLILUNZHI中增加两个字段
+FEE15	NUMBER(18,2)	Y			
+SFEE15	NUMBER(18,2)	Y		
+
+调整了视图的定义
+create or replace view newtrainlilunzhiview as
+select  newtrainlilunzhi.num,newtrainlilunzhi.trainname,byear,bmonth,shouru,pcount,sshouru,spcount,traintype
+,Fee1+Fee2+Fee3+Fee4+Fee5+Fee6+Fee7+Fee8+Fee9+Fee10+Fee11+Fee12+Fee13+Fee14+Fee15 Fee,
+sFee1+sFee2+sFee3+sFee4+sFee5+sFee6+sFee7+sFee8+sFee9+sFee10+sFee11+sFee12+sFee13+sFee14+SFee15 SFee
+from newtrainlilunzhi
+
+需删除以前的数据进行统计	

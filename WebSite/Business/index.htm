@@ -1,0 +1,16 @@
+﻿<html>
+<head>
+    <title>index</title>
+</head>
+<body onload="javaScript:CloseMy();">
+</body>
+</html>
+<script type="text/javascript" language="javascript">
+	function CloseMy()
+	{
+	    window.open("Login.aspx", null, "status=no,toolbar=no,menubar=no,location=no");
+	    window.opener=null;
+	    window.open("","_self");    
+        window.close();  
+	}
+</script>

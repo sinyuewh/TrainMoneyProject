@@ -1,0 +1,117 @@
+﻿/*1--------信息提示表格--------*/
+table.InfoTips       
+{
+	width: 99%;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+table.InfoTips td.Spar
+{
+	height:4pt;
+	background-color:#CCE8FF
+}
+
+/*2 -----------------------------*/
+table.InfoSearch
+{
+	border:solid 1pt #7CB1B5;
+	width:99%;
+}
+
+/*3-----------------------------*/
+Table.ListTable
+{
+	 background-color:#b5d6e6;
+	 width: 100%; 
+	 margin-top:3px;
+}
+
+Table.ListTable Td.Caption
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#CCE8FF;
+	 font-weight:bold;
+	 text-align:center;
+	 
+	 background-image:url("images/bg.gif");
+	 font-size:12px;
+	 
+}
+
+Table.ListTable Td.Caption_Left
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#CCE8FF;
+	 font-weight:bold;
+	 text-align:left;
+	 padding-left:3px;
+	 
+	 background-image:url("images/bg.gif");
+	 font-size:12px;
+}
+
+Table.ListTable Td.Caption_Right
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#CCE8FF;
+	 font-weight:bold;
+	 text-align:right;
+	 padding-right:3px;
+	 background-image:url("images/bg.gif");
+	 font-size:12px;
+}
+
+/*--------------------------------------------------*/
+Table.ListTable Td.Data
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#ffffff;
+	 text-align:center;
+	 word-break:break-all;
+	 font-size:12px;
+	 padding-top:2px; padding-bottom:2px
+}
+
+Table.ListTable Td.Data_Left
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#ffffff;
+	 text-align:left;
+	 padding-left:3px;
+	 word-break:break-all;
+	 font-size:12px;
+	 padding-top:2px; padding-bottom:2px
+}
+
+Table.ListTable Td.Data_Right
+{
+	 height:23px;
+	 vertical-align:middle;
+	 background-color:#ffffff;
+	 text-align:right;
+	 padding-right:3px;
+	 word-break:break-all;
+	 font-size:12px;
+	 padding-top:2px; padding-bottom:2px
+}
+
+/*------------------------------------------------*/
+Div.ButtonArea
+{
+	 text-align:center;
+	 padding-top:10;
+	 padding-bottom:10;
+}
+
+/*------------------------------------------------*/
+.STYLE1 {font-size: 12px}
+.STYLE3 {font-size: 12px; font-weight: bold;}
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}

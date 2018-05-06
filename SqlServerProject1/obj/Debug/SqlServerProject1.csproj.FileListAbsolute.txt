@@ -1,0 +1,8 @@
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\SqlServerProject1\bin\Debug\SqlServerProject1.dll.config
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\SqlServerProject1\bin\Debug\SqlServerProject1.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\SqlServerProject1\bin\Debug\SqlServerProject1.pdb
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\SqlServerProject1\obj\Debug\ResolveAssemblyReference.cache
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\SqlServerProject1\obj\Debug\SqlServerProject1.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\SqlServerProject1\obj\Debug\SqlServerProject1.pdb
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\SqlServerProject1\bin\Debug\SqlServerProject1.XmlSerializers.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\SqlServerProject1\obj\Debug\SqlServerProject1.XmlSerializers.dll

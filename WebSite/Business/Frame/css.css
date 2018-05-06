@@ -1,0 +1,527 @@
+body
+{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#f0f8ff;
+	font-size: 14px;
+	
+	overflow: auto; color: #000000; 
+	background-image: url(../images/ty1.jpg);
+    border: solid 0px black;
+    height: 100%; 
+    
+    scrollbar-face-color: #d3d3d3;
+    scrollbar-shadow-color: #F3F4F4; 
+    scrollbar-highlight-color: #F3F4F4; 
+    scrollbar-3dlight-color: #F3F4F4;
+    scrollbar-darkshadow-color: #F3F4F4; 
+    scrollbar-track-color: #F3F4F4; 
+    scrollbar-arrow-color: #F3F4F4;
+}
+
+
+/*--美化滚动条的样式--*/
+.MyScroll
+{
+	overflow: auto; color: #000000; 
+	background-image: url(../images/ty1.jpg);
+    border: solid 0px black;
+    height: 100%; 
+    scrollbar-face-color: #E6E7E7;
+    scrollbar-shadow-color: #F3F4F4; 
+    scrollbar-highlight-color: #F3F4F4; 
+    scrollbar-3dlight-color: #F3F4F4;
+    scrollbar-darkshadow-color: #F3F4F4; 
+    scrollbar-track-color: #F3F4F4; 
+    scrollbar-arrow-color: #F3F4F4;
+}
+
+.BodyContent
+{
+	text-align:center;
+}
+
+/*---列表信息的表格及列的样式---*/
+table.fmTableTitle
+{
+	 width:98%;
+	
+}
+td.fmTableTitleSpar
+{
+	height:4pt;
+	background-color:#CCE8FF
+}
+
+/*--------------------------*/
+
+table.fmTableInfo
+{
+	width:98%;
+	 border:solid 0pt white;
+	 background-color:#ADDAFF
+}
+
+td.fmtableTitleCol
+{
+	height:22pt; 
+	text-align:right;
+	vertical-align:middle;
+	background-color:#EDF7FF;
+	
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	 padding-right:2pt;
+}
+
+td.fmtableContentCol
+{
+	height:22pt; 
+	text-align:left;
+	vertical-align:middle;
+	background-color:#EDF7FF;
+	
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	padding-left:2pt;
+}
+
+td.fmtableButtonCol
+{
+	height:30pt; 
+	text-align:center;
+	vertical-align:middle;
+	background-color:#EDF7FF;
+	width:100%
+}
+
+.btn 
+{
+  
+ BORDER-RIGHT: #7b9ebd 1px solid;
+  PADDING-RIGHT: 2px; 
+  BORDER-TOP: #7b9ebd 1px solid;
+  PADDING-LEFT: 2px; FONT-SIZE: 12px;
+  FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#cecfde);
+  BORDER-LEFT: #7b9ebd 1px solid; 
+  CURSOR: hand; 
+  COLOR: black; 
+  PADDING-TOP: 2px;
+  BORDER-BOTTOM: #7b9ebd 1px solid;
+  
+}
+
+/*---------------------------*/
+
+table.lsTable
+{
+	background-color:#ADDAFF;
+	border:solid 0pt black;
+	margin-top:10pt;
+}
+
+td.lsTitle
+{
+	background-color:#CCE8FF;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight:bold;
+	color: #000000;
+	text-align:center;
+	
+}
+
+td.lsContent
+{
+	background-color:#EDF7FF;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight:normal;
+	color: #000000;
+	text-align:center;
+}
+/*---列表信息的表格及列的样式---*/
+
+.hei {
+	
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.kx {
+	height: 182px;
+	width: 70px;
+}
+.bian101 {
+	border: 1px solid #7796D7;
+}
+
+.heic0 {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.lan10 {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #0578A5;
+	text-decoration: none;
+}
+.bhbi {
+	border: 1px solid #4884A4;
+}
+
+
+
+.k1 {
+	height: 14px;
+	width: 55px;
+}
+.blan {
+	border: 1px solid #7796D7;
+}
+.lan14 {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #037CED;
+	text-decoration: none;
+}
+
+.wr {
+	height: 12px;
+	width: 140px;
+}
+.wr1 {
+	height: 18px;
+	width: 110px;
+}
+.bai {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.hongc {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+
+.rh00 {
+	font-family: "宋体";
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+.hong1 {
+	font-family: "宋体";
+	font-size: 24px;
+	font-style: normal;
+	line-height: 45px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+}
+.bianl {
+	border: 1px solid #66CCFF;
+}
+
+/*---- 链接的样式设置 (白色)-----*/
+
+
+/*---- 链接的样式设置 (黑色)-----*/
+
+/*---- 链接的样式设置(浅绿色) -----*/
+
+
+
+/*---- 链接的样式设置 -----*/
+
+.hong {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+.heic {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.syb {
+	font-family: "宋体";
+	font-size: 13px;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 18px;
+}
+.soo {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 15px;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+.heic00 {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.xk {
+	height: 18px;
+	width: 60px;
+}
+.k001 {
+	height: 18px;
+	width: 487px;
+}
+.k002 {
+	height: 18px;
+	width: 152px;
+}
+.k003 {
+	height: 247px;
+	width: 487px;
+}
+
+.hei {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+
+.hong {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+.heic {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.ls{ color:#0066FF; font-weight:bold; font-size:18px}
+.l{ color:#0066FF; font-weight:bold; font-size:12px;}
+.sb{ margin-top:2px;}
+.sj{ margin-top:2px;}
+.rt{border-right:1px #7796D7 solid;}
+.rt2{border-right:1px  #7796D7 solid;margin-top:2px;}
+.sj2{ margin-top:2px;border-right:1px #7796D7 solid;}
+.sb{margin:5px 0px;}
+.sb2{margin-top:5px; }
+.sb3{margin-bottom:5px;margin-top:5px;  }
+.ct{ color:#000000; font-size:14px; font-weight:bold}
+.ct a:link,.ct a:visited{ color:#000000; text-decoration:none}
+.ct a:hover{ color:#000000; text-decoration:underline}
+
+.wb
+{ border:1px solid #666666;
+  font-size:14px;
+  	
+}
+
+.wbFile
+{ border:1px solid #666666;
+  font-size:14px;
+}
+
+.link9{ color:#000000; font-size:14px}
+.link9 a:link,.link9 a:visited{ color:#000000; text-decoration:none}
+.link9 a:hover{
+	color: #0066FF;
+	text-decoration: underline;
+}
+
+/*-----------------------------------*/
+
+a.linkhei:link {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+a.linkhei:active
+{
+    font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none; 
+}
+a.linkhei:visited {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color:black;
+	text-decoration: none;
+}
+a.linkhei:hover {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+}
+
+/*------------------------------------------------*/
+a.linkheiText:link {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+a.linkheiText:active
+{
+    font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none; 
+}
+a.linkheiText:visited {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color:gray;
+	text-decoration: none;
+}
+a.linkheiText:hover {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+}
+
+/*---- 链接的样式 设置 -----*/
+a.blue:link {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: blue;
+	text-decoration:underline;
+}
+a.blue:visited {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: blue;
+	text-decoration: none;
+}
+a.blue:hover {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: Red;
+	text-decoration:underline;
+}
+
+a.qianlu:link {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #0578A5;
+	text-decoration: none;
+}
+a.qianlu:visited {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color:Gray;
+	text-decoration: none;
+}
+a.qianlu:hover {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: red;
+	text-decoration: underline;
+}
+
+
+a.baise:link {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #ffffff;
+	text-decoration: none;
+}
+a.baise:visited {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color:Gray;
+	text-decoration: none;
+}
+a.baise:hover {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: Red;
+	text-decoration: underline;
+}

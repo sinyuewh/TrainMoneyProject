@@ -1,0 +1,13 @@
+﻿1）在表 hightrainprofile 中增加了字段 
+   RATE5 和 PCOUNT5
+   
+   
+2) 宿营车定员配置
+   /TrainWeb/SystemProfile/Shouru07_SycPerson.aspx
+   39 (Id) Num=0
+   
+   
+	
+    
+    
+		

@@ -1,0 +1,102 @@
+E:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\BusinessRule.dll
+E:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\BusinessRule.pdb
+E:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+E:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\WebFrame.dll
+E:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\WebFrame.pdb
+E:\MyProject\WebSolutionModel\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+E:\MyProject\WebSolutionModel\BusinessRule\obj\Debug\BusinessRule.dll
+E:\MyProject\WebSolutionModel\BusinessRule\obj\Debug\BusinessRule.pdb
+F:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\BusinessRule.dll
+F:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\BusinessRule.pdb
+F:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+F:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\WebFrame.dll
+F:\MyProject\WebSolutionModel\BusinessRule\bin\Debug\WebFrame.pdb
+F:\MyProject\WebSolutionModel\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+F:\MyProject\WebSolutionModel\BusinessRule\obj\Debug\BusinessRule.dll
+F:\MyProject\WebSolutionModel\BusinessRule\obj\Debug\BusinessRule.pdb
+E:\WebSolutionModel\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+E:\WebSolutionModel\BusinessRule\obj\Debug\BusinessRule.pdb
+E:\WebSolutionModel\BusinessRule\bin\Debug\BusinessRule.dll
+E:\WebSolutionModel\BusinessRule\bin\Debug\BusinessRule.pdb
+E:\WebSolutionModel\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+E:\WebSolutionModel\BusinessRule\bin\Debug\WebFrame.dll
+E:\WebSolutionModel\BusinessRule\obj\Debug\BusinessRule.dll
+E:\KingOrientWebSolutionModel\BusinessRule\bin\Debug\BusinessRule.dll
+E:\KingOrientWebSolutionModel\BusinessRule\bin\Debug\BusinessRule.pdb
+E:\KingOrientWebSolutionModel\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+E:\KingOrientWebSolutionModel\BusinessRule\bin\Debug\WebFrame.dll
+E:\KingOrientWebSolutionModel\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+E:\KingOrientWebSolutionModel\BusinessRule\obj\Debug\BusinessRule.dll
+E:\KingOrientWebSolutionModel\BusinessRule\obj\Debug\BusinessRule.pdb
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\BusinessRule.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\BusinessRule.pdb
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\WebFrame.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\BusinessRule.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\BusinessRule.pdb
+X:\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\BusinessRule.dll
+X:\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\BusinessRule.pdb
+X:\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+X:\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\WebFrame.dll
+X:\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\WebFrame.pdb
+X:\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+X:\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\BusinessRule.dll
+X:\金太阳\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\BusinessRule.pdb
+C:\Documents and Settings\Administrator\桌面\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\BusinessRule.pdb
+C:\Documents and Settings\Administrator\桌面\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\BusinessRule.dll
+C:\Documents and Settings\Administrator\桌面\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\BusinessRule.pdb
+C:\Documents and Settings\Administrator\桌面\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+C:\Documents and Settings\Administrator\桌面\铁路局项目\TrainMoneySolution\BusinessRule\bin\Debug\WebFrame.dll
+C:\Documents and Settings\Administrator\桌面\铁路局项目\TrainMoneySolution\BusinessRule\obj\Debug\BusinessRule.dll
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\bin\Debug\BusinessRule.dll
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\bin\Debug\BusinessRule.pdb
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\bin\Debug\WebFrame.dll
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\obj\Debug\BusinessRule.dll
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\obj\Debug\BusinessRule.pdb
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\bin\Debug\org.in2bits.MyXls.dll
+C:\Documents and Settings\Administrator\桌面\测试文档\TrainMoneySolution\BusinessRule\bin\Debug\org.in2bits.MyXls.pdb
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.dll.config
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.dll
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.pdb
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\AJAXExtensionsToolbox.dll
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\org.in2bits.MyXls.dll
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\System.Web.Extensions.Design.dll
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\System.Web.Extensions.dll
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\WebFrame.dll
+D:\MyProject\TrainMoneyProject\BusinessRule\bin\Debug\org.in2bits.MyXls.pdb
+D:\MyProject\TrainMoneyProject\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProject\TrainMoneyProject\BusinessRule\obj\Debug\BusinessRule.dll
+D:\MyProject\TrainMoneyProject\BusinessRule\obj\Debug\BusinessRule.pdb
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.dll.config
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.dll
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.pdb
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\AJAXExtensionsToolbox.dll
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\org.in2bits.MyXls.dll
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\System.Web.Extensions.Design.dll
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\System.Web.Extensions.dll
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\WebFrame.dll
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\org.in2bits.MyXls.pdb
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\obj\Debug\BusinessRule.dll
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\obj\Debug\BusinessRule.pdb
+D:\武汉东方金太阳\武汉铁路局项目组\TrainMoneyProject\BusinessRule\bin\Debug\Microsoft.SqlServer.BatchParser.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.dll.config
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\BusinessRule.pdb
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\AJAXExtensionsToolbox.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\FredCK.FCKeditorV2.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\org.in2bits.MyXls.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\System.Web.Extensions.Design.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\System.Web.Extensions.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\WebFrame.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\Microsoft.SqlServer.BatchParser.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\bin\Debug\org.in2bits.MyXls.pdb
+E:\MyProject2017\TrainMoneyProject\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
+E:\MyProject2017\TrainMoneyProject\BusinessRule\obj\Debug\BusinessRule.dll
+E:\MyProject2017\TrainMoneyProject\BusinessRule\obj\Debug\BusinessRule.pdb

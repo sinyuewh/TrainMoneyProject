@@ -1,0 +1,29 @@
+﻿/*-------------创建触发器--------------------*/
+create or replace trigger trigger_trainalias
+after delete or insert or update on trainalias
+begin
+     update searchobjectlist set savetime =null;
+end;
+
+create or replace trigger trigger_TRAINLINE
+after delete or insert or update on TRAINLINE
+begin
+     update searchobjectlist set savetime =null;
+end;
+
+
+create or replace trigger trigger_LINESTATION
+after delete or insert or update on LINESTATION
+begin
+     update searchobjectlist set savetime =null;
+end;
+
+
+19列车运输人数.sql
+23车次的理论值.sql
+24电费和接触网使用费.sql
+
+3) 在表NEWTRAIN中增加字段 
+    LINE	NVARCHAR2(500)	Y
+
+

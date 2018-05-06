@@ -1,0 +1,233 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>无标题文档</title>
+    <style type="text/css">
+        -- body
+        {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
+        .navPoint
+        {
+            color: white;
+            cursor: hand;
+            font-family: Webdings;
+            font-size: 9pt;
+        }
+    </style>
+
+    <script>
+        function switchSysBar() {
+
+            var locate = location.href.replace('left.html', '');
+            var ssrc = document.getElementById("img1").src.replace(locate, '');
+            if (ssrc == "images/main_41.gif") {
+                document.getElementById("img1").src = "images/main_41_1.gif";
+                parent.frame.cols = "18,*";
+                document.getElementById("frmTitle").style.display = "none"
+            }
+            else {
+                document.getElementById("img1").src = "images/main_41.gif"
+                parent.frame.cols = "188,*";
+                document.getElementById("frmTitle").style.display = ""
+            }
+        }
+        function closewin() {
+            if (opener != null && !opener.closed) {
+                opener.window.newwin = null;
+                opener.openbutton.disabled = false;
+                opener.closebutton.disabled = true;
+            }
+        }
+
+
+        var count = 0; //做计数器
+        var limit = new Array(); //用于记录当前显示的哪几个菜单
+        var countlimit = 1; //同时打开菜单数目，可自定义
+        function expandIt(el) {
+            obj = document.getElementById("tab" + el);
+            if (obj.style.display == "none") {
+                obj.style.display = "block"; //显示子菜单
+                if (count < countlimit) {//限制2个
+                    limit[count] = el; //录入数组
+                    count++;
+                }
+                else {
+                    eval("tab" + limit[0]).style.display = "none";
+                    for (i = 0; i < limit.length - 1; i++) { limit[i] = limit[i + 1]; } //数组去掉头一位，后面的往前挪一位
+                    limit[limit.length - 1] = el;
+                }
+            }
+//            else {
+//                obj.style.display = "none";
+//                var j;
+//                for (i = 0; i < limit.length; i++) { if (limit[i] == el) j = i; } //获取当前点击的菜单在limit数组中的位置
+//                for (i = j; i < limit.length - 1; i++) { limit[i] = limit[i + 1]; } //j以后的数组全部往前挪一位
+//                limit[limit.length - 1] = null; //删除数组最后一位
+//                count--;
+//            }
+        }
+    </script>
+
+</head>
+<body onunload="closewin()" onload="expandIt('1')">
+    <table height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#e5f4fd">
+        <tr>
+            <td valign="top" id="frmTitle" nowrap name="fmTitle" width="171">
+                <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
+                    <tr height="100%">
+                        <td style="width: 3px; background: #0a5c8e;">
+                            &nbsp;
+                        </td>
+                        <td valign="top">
+                            <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
+                                <tr>
+                                    <td height="5" style="line-height: 5px; background: #0a5c8e;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr onclick="expandIt('1')">
+                                    <td height="23" background="images/main_29.gif">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="40%">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="42%">
+                                                    <font style="height: 1; font-size: 9pt; color: #bfdbeb; filter: glow(color=#1070a3,strength=1)">
+                                                        方法管理</font>
+                                                </td>
+                                                <td width="18%">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr id="tab1"  style="display:none; height:100%">
+                                    <td bgcolor="#e5f4fd" >
+                                        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td valign="top">
+                                                    <div align="center">
+                                                        <img src="images/tree.gif" width="117" height="189"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr onclick="expandIt('2')">
+                                    <td height="25" background="images/main_43.gif">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="37%">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="45%">
+                                                    <font style="height: 1; font-size: 9pt; color: #bfdbeb; filter: glow(color=#1070a3,strength=1)">
+                                                        方法浏览</font>
+                                                </td>
+                                                <td width="18%">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr id="tab2"  style="display: none">
+                                    <td bgcolor="#e5f4fd">
+                                        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td valign="top">
+                                                    <div align="center">
+                                                        <img src="images/tree.gif" width="117" height="189"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr onclick="expandIt('3')">
+                                    <td height="25" background="images/main_43.gif">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="37%">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="45%">
+                                                    <font style="height: 1; font-size: 9pt; color: #bfdbeb; filter: glow(color=#1070a3,strength=1)">
+                                                        其他菜单</font>
+                                                </td>
+                                                <td width="18%">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr id="tab3" style="display: none">
+                                    <td bgcolor="#e5f4fd">
+                                        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td valign="top">
+                                                    <div align="center">
+                                                    <ul style=" font-size:15px">
+                                                    <li>其他菜单</li>
+                                                    <li>其他菜单</li>
+                                                    <li>其他菜单</li>
+                                                    </ul>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 3px; background: #0a5c8e;">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
+                                <tr>
+                                    <td height="23" background="images/main_45.gif">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="18%">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="64%">
+                                                    <div align="center">
+                                                        <font style="height: 1; font-size: 9pt; color: #bfdbeb; filter: glow(color=#1070a3,strength=1)">
+                                                            版本2008 V1.0 </font>
+                                                    </div>
+                                                </td>
+                                                <td width="18%">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="9" style="line-height: 9px; background: #0a5c8e;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="9" valign="middle" bgcolor="#0a5c8e" onclick="switchSysBar()">
+                <span class="navPoint" id="switchPoint" title="关闭/打开左栏">
+                    <img src="images/main_41.gif" name="img1" width="9" height="52" id="img1" /></span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

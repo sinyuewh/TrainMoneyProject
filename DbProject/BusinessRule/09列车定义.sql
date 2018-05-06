@@ -1,0 +1,55 @@
+﻿CREATE TABLE Train
+(							
+	num int,
+	TrainName varchar(50) not null primary key,
+	TrainBigKind int not null,
+	TrainType	varchar(50) not null,
+	TrainLine varchar(50) not null,
+	
+	YuXingLiCheng int not null,
+
+	YinZuo int not null,          
+    RuanZuo int not null,          
+    OpenYinWo int not null,         
+    CloseYinWo int not null,        
+    RuanWo int not null,             
+    AdvanceRuanWo int not null,     
+    CanChe int not null,            
+    FaDianChe int not null,         
+    ShuYinChe int not null,          
+
+    YinZuoPrice number(18,2),
+    RuanZuoPrice number(18,2),
+    OpenYinWoPrice number(18,2),
+    CloseYinWoPrice number(18,2),
+    RuanWoPrice number(18,2),
+    AdvanceRuanWoPrice number(18,2),
+    CanChePrice number(18,2),
+    FaDianChePrice number(18,2),
+    ShuYinChePrice number(18,2),
+    
+    JiaKuai int,			
+    KongTiaoFee int,
+    XieBieZhengJiaFee int,
+    QianYinType int,
+    GongDianType int,
+    WaterCount int,
+    ServerPerson int,
+    RunHour int,
+    YongCheDiShu number(18,2),
+    CheDiShu number(18,2),
+    
+    Line0 number(18,2),      
+    Line1 number(18,2),  
+    Line2 number(18,2),   
+    Line3 number(18,2),    
+    Line4 number(18,2),    
+    Line5 number(18,2),     
+    Line6 number(18,2),     
+    Line7 number(18,2),     
+    Line8 number(18,2),
+    
+    HighTrainBianZhu int,
+    HighTrainBigKind int,
+    CunZengMoShi int  
+)

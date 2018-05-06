@@ -1,0 +1,5 @@
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\WebService1\bin\WebService1.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\WebService1\bin\WebService1.pdb
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\WebService1\obj\Debug\ResolveAssemblyReference.cache
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\WebService1\obj\Debug\WebService1.dll
+E:\快盘\金太阳\铁路局项目\TrainMoneySolution\WebService1\obj\Debug\WebService1.pdb

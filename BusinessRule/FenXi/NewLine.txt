@@ -1,0 +1,434 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+
+using WebFrame;
+using WebFrame.Data;
+using WebFrame.Util;
+using WebFrame.Designer;
+using WebFrame.ExpControl;
+
+namespace BusinessRule
+{
+    
+    //线路定义
+    public class NewLine
+    {       
+        #region 属性和构造函数
+        private int MaxLayer=25;
+        private String AStation = null;
+        private String BStation = null;
+        private ETrainType trainType = ETrainType.空调车25T;
+        private List<LineNode>[] LineLayer = null;                                      //表示所有的节点
+       
+        private List<String> A0 = null;
+        private List<String> B0 = null;
+        private String tempA0 = String.Empty;
+        private String tempB0 = String.Empty;
+
+        public NewLine(String AStation, String BStation,
+            ETrainType trainType,int MaxLayer)
+        {
+            if (String.IsNullOrEmpty(AStation) == false
+                && String.IsNullOrEmpty(BStation) == false)
+            {
+                this.AStation = AStation;
+                this.BStation = BStation;
+                this.trainType = trainType;
+                this.MaxLayer = MaxLayer;
+
+                TrainAliasBU t1 = new TrainAliasBU();
+                this.A0 = t1.GetAlias(this.AStation);
+                this.B0 = t1.GetAlias(this.BStation);
+                //计算tempA0
+                foreach (String m in A0)
+                {
+                    if (this.tempA0 == String.Empty)
+                    {
+                        this.tempA0 = m;
+                    }
+                    else
+                    {
+                        this.tempA0 = this.tempA0 + "','" + m;
+                    }
+                }
+                this.tempA0 = "'" + this.tempA0 + "'";
+
+                //计算tempB0
+                foreach (String m in B0)
+                {
+                    if (this.tempB0 == String.Empty)
+                    {
+                        this.tempB0 = m;
+                    }
+                    else
+                    {
+                        this.tempB0 = this.tempB0 + "','" + m;
+                    }
+                }
+                this.tempB0 = "'" + this.tempB0 + "'";
+
+                //设置线路中的节点
+                SetLayerNodesInit();
+            }
+        }
+
+        public NewLine(String AStation, String BStation,
+            ETrainType trainType):this(AStation, BStation, trainType, 25)
+        {
+            
+        }
+        #endregion
+
+        #region Private Function
+        //设置线路站点中的数据
+        private void SetLayerNodesInit()
+        {
+            this.LineLayer = new List<LineNode>[this.MaxLayer+1];
+            for (int i = 0; i < this.LineLayer.Length; i++)
+            {
+                this.LineLayer[i] = new List<LineNode>();
+            }
+
+            //设置层节点数据
+            JTable tab1 = new JTable("LINESTATIONVIEW");
+            tab1.OrderBy = "AStation,BStation,Miles desc";
+            DataTable InitTable = tab1.SearchData(null, -1, "*").Tables[0];
+            tab1.Close();
+
+            List<SearchField> condition = new List<SearchField>();
+            condition.Add(new SearchField("BStation not in("+ this.tempA0+")","",SearchOperator.UserDefine));
+            condition.Add(new SearchField("AStation not in(" + this.tempB0 + ")", "", SearchOperator.UserDefine));
+
+            #region 线路限制条件
+            switch (this.trainType)
+            {
+                case ETrainType.绿皮车25B:
+                    condition.Add(new SearchField("(LINETYPE<>'1' and  LINETYPE<>'2')", "", SearchOperator.UserDefine));
+                    break;
+                case ETrainType.空调车25K:
+                    condition.Add(new SearchField("(LINETYPE<>'1' and  LINETYPE<>'2')", "", SearchOperator.UserDefine));
+                    break;
+                case ETrainType.空调车25G:
+                    condition.Add(new SearchField("(LINETYPE<>'1' and  LINETYPE<>'2')", "", SearchOperator.UserDefine));
+                    break;
+                case ETrainType.空调车25T:
+                    condition.Add(new SearchField("(LINETYPE<>'1')", "", SearchOperator.UserDefine));
+                    break;
+                case ETrainType.动车CRH2A:
+                    condition.Add(new SearchField("(LINETYPE<>'1')", "", SearchOperator.UserDefine));
+                    break;
+                case ETrainType.动车CRH2E:
+                    condition.Add(new SearchField("(LINETYPE<>'1')", "", SearchOperator.UserDefine));
+                    break;
+                case ETrainType.动车CRH2C:
+                    condition.Add(new SearchField("(LINETYPE='1')", "", SearchOperator.UserDefine));
+                    break;
+                case ETrainType.动车CRH380A:
+                    condition.Add(new SearchField("(LINETYPE='1')", "", SearchOperator.UserDefine));
+                    break;
+                case ETrainType.动车CRH380AL:
+                    condition.Add(new SearchField("(LINETYPE='1')", "", SearchOperator.UserDefine));
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            for (int i = 0; i < this.LineLayer.Length; i++)
+            {
+                if (condition.Count != 3)
+                {
+                    condition.RemoveAt(4);
+                    condition.RemoveAt(3);
+                }
+                SetLayerNodes(InitTable, i, condition);
+            }
+
+            //剔除不用的站点
+            for (int i = this.LineLayer.Length - 1; i >= 0; i--)
+            {
+                if (this.LineLayer[i].Count > 0)
+                {
+                    this.MaxLayer = i;
+                    break;
+                }
+            }
+        }
+
+        //在层中寻找站点
+        private LineNode FindNode(int lay, int parent)
+        {
+            LineNode find = null;
+            foreach (LineNode node1 in this.LineLayer[lay])
+            {
+                if (node1.ID == parent)
+                {
+                    find = node1;
+                    break;
+                }
+            }
+            return find;
+        }
+
+        // 得到当前线路已经过的节点
+        private String GoneStation(int lay, LineNode node1)
+        {
+            int parent1 = node1.Parent;
+            String result = String.Empty;
+            while (lay != 0 && parent1 >= 0)
+            {
+                LineNode node = null;
+                foreach (LineNode n1 in this.LineLayer[lay - 1])
+                {
+                    if (n1.ID == parent1)
+                    {
+                        node = n1;
+                        break;
+                    }
+                }
+
+                if (node != null)
+                {
+                    String temp = node.AStation;
+                    if (result == String.Empty)
+                    {
+                        result = temp;
+                    }
+                    else
+                    {
+                        result = result + "," + temp;
+                    }
+                    parent1 = node.Parent;
+                }
+                else
+                {
+                    parent1 = -1;
+                }
+                lay--;
+            }
+            return result;
+        }
+
+        //设置线路层次站点
+        private void SetLayerNodes(DataTable tab1, int lay,
+           List<SearchField> condition)
+        {
+            String tempA = String.Empty;
+            String tempB = String.Empty;
+
+            if (lay == 0)
+            {
+                condition.Add(new SearchField("Astation in (" + this.tempA0 + ")", "", SearchOperator.UserDefine));
+                condition.Add(new SearchField("BStation not in (" + this.tempA0 + ")", "", SearchOperator.UserDefine));
+                String filter = SearchField.GetSearchCondition(condition);
+                DataRow[] drs = tab1.Select(filter);
+                foreach (DataRow dr1 in drs)
+                {
+                    if (dr1["AStation"].ToString() != tempA ||
+                        dr1["BStation"].ToString() != tempB)
+                    {
+                        LineNode data1 = new LineNode();
+                        data1.AStation = dr1["AStation"].ToString();
+                        data1.BStation = dr1["BStation"].ToString();
+
+                        data1.LineID = dr1["LineID"].ToString();
+                        data1.Miles = int.Parse(dr1["Miles"].ToString());
+                        data1.LineType = dr1["LineType"].ToString();
+                        data1.Parent = 0;
+                        data1.ID = int.Parse(dr1["ID"].ToString());
+
+                        tempA = dr1["AStation"].ToString();
+                        tempB = dr1["BStation"].ToString();
+
+                        if (IsHasNodes(lay, data1) == false)
+                        {
+                            this.LineLayer[lay].Add(data1);     //将站点加入到层
+                        }
+                    }
+                }
+                condition.RemoveAt(4);
+                condition.RemoveAt(3);
+            }
+            else
+            {
+                SearchField Astation = null;
+                SearchField BStation = null;
+                for (int i = 0; i < this.LineLayer[lay - 1].Count; i++)
+                {
+                    LineNode node1 = this.LineLayer[lay - 1][i];
+                    if (node1.BStation != this.BStation)
+                    {
+                        if (Astation != null) condition.Remove(Astation);
+                        if (BStation != null) condition.Remove(BStation);
+
+                        Astation = new SearchField("Astation", node1.BStation);
+                        String go = this.GoneStation(lay - 1, node1);
+                        if (String.IsNullOrEmpty(go) == false)
+                        {
+                            BStation = new SearchField("BStation <>'" + node1.AStation + "' and BStation not in ('" + go + "')", "", SearchOperator.UserDefine);
+                        }
+                        else
+                        {
+                            BStation = new SearchField("BStation", node1.AStation, SearchOperator.NotEqual);
+                        }
+
+                        condition.Add(Astation);
+                        condition.Add(BStation);
+
+                        String filter = SearchField.GetSearchCondition(condition);
+                        DataRow[] drs = tab1.Select(filter);
+
+                        foreach (DataRow dr1 in drs)
+                        {
+                            if (dr1["AStation"].ToString() != tempA ||
+                                dr1["BStation"].ToString() != tempB)
+                            {
+                                LineNode data1 = new LineNode();
+                                data1.AStation = dr1["AStation"].ToString();
+                                data1.BStation = dr1["BStation"].ToString();
+                                data1.ID = int.Parse(dr1["ID"].ToString());
+
+                                data1.LineID = dr1["LineID"].ToString();
+                                data1.Miles = int.Parse(dr1["Miles"].ToString());
+                                data1.LineType = dr1["LineType"].ToString();
+                                data1.Parent = node1.ID;
+
+                                tempA = dr1["AStation"].ToString();
+                                tempB = dr1["BStation"].ToString();
+
+                                if (IsHasNodes(lay, data1) == false
+                                    && IsHasNodes(lay - 1, data1) == false)
+                                {
+                                    this.LineLayer[lay].Add(data1);     //将站点加入到层
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // 判断某层是否已存在该节点
+        private bool IsHasNodes(int Layer, LineNode node1)
+        {
+            bool result = false;
+            foreach (LineNode n1 in this.LineLayer[Layer])
+            {
+                if (node1.AStation == n1.AStation
+                    && node1.BStation == n1.BStation)
+                {
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+
+        //判断线路是否通过中间站点
+        private static bool CheckLineByMiddleStation(TrainLine line1, String[] station)
+        {
+            bool succ = true;
+            if (station != null)
+            {
+                int pass1 = station.Length;
+                int pass2 = 0;
+                foreach (String m in station)
+                {
+                    succ = false;
+                    TrainAliasBU bu1 = new TrainAliasBU();
+                    if (CheckLineByMiddleStation(line1, m, bu1))
+                    {
+                        pass2++;
+                        if (pass2 >= pass1)
+                        {
+                            succ = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            return succ;
+        }
+
+        // 判断线路是否通过某个中间站点（单一的站点，支持别名)
+        private static bool CheckLineByMiddleStation
+            (
+            TrainLine line1, 
+            String station, TrainAliasBU bu1)
+        {
+            bool succ = false;
+            List<String> list1 = bu1.GetAlias(station);
+            foreach (String m in list1)
+            {
+                if (m.Trim() == String.Empty || Array.IndexOf(line1.ArrStation,m)>=0)
+                {
+                    succ = true;
+                    break;
+                }
+            }
+            return succ;
+        }
+        #endregion
+
+        //得到线路
+        public List<TrainLine> GetLayerLine(String[] KeyStation, int PageSize)
+        {
+             List<List<LineNode>> SearchlistLine = new List<List<LineNode>>();
+             for (int i = this.MaxLayer; i > 0; i--)
+             {
+                 foreach (LineNode node1 in this.LineLayer[i])
+                 {
+                     if (node1.BStation == this.BStation)
+                     {
+                         List<LineNode> line = new List<LineNode>();
+                         line.Add(node1);
+                         LineNode find = node1;
+
+                         for (int j = i - 1; j >= 0; j--)
+                         {
+                             LineNode second = this.FindNode(j, find.Parent);
+                             if (second != null)
+                             {
+                                 line.Add(second);
+                                 find = second;
+                             }
+                         }
+                         SearchlistLine.Add(line);
+                     }
+                 }
+             }
+
+             List<TrainLine> resultLine = new List<TrainLine>();
+             foreach (List<LineNode> line in SearchlistLine)
+             {
+                 TrainLine line1 = new TrainLine();
+                 for (int i = line.Count - 1; i >= 0; i--)
+                 {
+                     line1.Nodes.Add(line[i]);
+                 }
+                 resultLine.Add(line1);
+             }
+             resultLine.Sort();   //排序
+
+             List<TrainLine> resultLine1 = new List<TrainLine>();
+             int index = 0;
+             foreach (TrainLine line in resultLine)
+             {
+                 if (CheckLineByMiddleStation(line, KeyStation))
+                 {
+                     resultLine1.Add(line);
+                     index++;
+                     if (index >= PageSize)
+                     {
+                         break;
+                     }
+                 }
+             }
+             return resultLine1;
+        }
+    }
+}

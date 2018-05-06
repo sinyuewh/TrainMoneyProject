@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEBAF67C-5457-4CAB-967B-0D0A5AB01C29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessRule</RootNamespace>
+    <AssemblyName>BusinessRule</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AJAXExtensionsToolbox, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.4.23284, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="org.in2bits.MyXls, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebFrame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeReference\MyTest.cs" />
+    <Compile Include="FenXi\CommTrain0.cs" />
+    <Compile Include="FenXi\CommTrain1.cs" />
+    <Compile Include="FenXi\TicketPrice.cs" />
+    <Compile Include="FenXi\TrainFare.cs" />
+    <Compile Include="Shouru\TrainShouru.cs" />
+    <Compile Include="FenXi\HighTrain0.cs" />
+    <Compile Include="FenXi\HighTrain1.cs" />
+    <Compile Include="FenXi\Train.cs" />
+    <Compile Include="FenXi\TrainProfile.cs" />
+    <Compile Include="FenXi\TrainTypeProfile.cs" />
+    <Compile Include="Shouru\TrainShouru1.cs" />
+    <Compile Include="Train\LineTrainBU.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Train\Back\CommTrainBU1.cs" />
+    <Compile Include="PubCode\MyUserName.cs" />
+    <Compile Include="PubCode\Util.cs" />
+    <Compile Include="Train\TrainAliasBU.cs" />
+    <Compile Include="Train\NewTrainBU.cs" />
+    <Compile Include="xtgl\Frm_modelBU.cs" />
+    <Compile Include="xtgl\Frm_modelgroupBU.cs" />
+    <Compile Include="xtgl\Frm_systableBU.cs" />
+    <Compile Include="xtgl\JauthorityBU.cs" />
+    <Compile Include="xtgl\JerrorlogBU.cs" />
+    <Compile Include="xtgl\JitemBU.cs" />
+    <Compile Include="xtgl\JitemdetailBU.cs" />
+    <Compile Include="xtgl\JroleBU.cs" />
+    <Compile Include="xtgl\JroleusersBU.cs" />
+    <Compile Include="xtgl\JsqlinfoBU.cs" />
+    <Compile Include="Train\Back\CommTrainBU2.cs" />
+    <Compile Include="Train\Back\CommTrainBU3.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="include\AJAXExtensionsToolbox.dll" />
+    <Content Include="include\AjaxPro.2.dll" />
+    <Content Include="include\FredCK.FCKeditorV2.dll" />
+    <Content Include="include\org.in2bits.MyXls.dll" />
+    <Content Include="include\org.in2bits.MyXls.pdb" />
+    <Content Include="include\System.Web.Extensions.Design.dll" />
+    <Content Include="include\System.Web.Extensions.dll" />
+    <Content Include="include\WebFrame.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FenXi\CORPINFO.cs" />
+    <Compile Include="FenXi\PayProj.cs" />
+    <Compile Include="FenXi\SearchObjectBU.cs" />
+    <Compile Include="FenXi\TrainMaxCheXianBU.cs" />
+    <Compile Include="PubCode\KORPage.cs" />
+    <Compile Include="FenXi\STATIONINFO.cs" />
+    <Compile Include="PubCode\TrainPersonBU.cs" />
+    <Compile Include="PubCode\UTool.cs" />
+    <Compile Include="Shouru\HighTrainShouru.cs" />
+    <Compile Include="Train\BigStationBU.cs" />
+    <Compile Include="Train\ChangJiaoFeeBU.cs" />
+    <Compile Include="Train\CorpInfoBU.cs" />
+    <Compile Include="Train\NewTrainZhiChuBU.cs" />
+    <Compile Include="Train\SRateProfileBU.cs" />
+    <Compile Include="xtgl\DBUpgrade.cs" />
+    <Compile Include="xtgl\KIPBU.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

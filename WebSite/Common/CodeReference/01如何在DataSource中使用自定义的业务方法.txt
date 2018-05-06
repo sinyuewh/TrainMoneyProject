@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+
+using System.Text;
+using WebFrame;
+
+namespace BusinessRule
+{
+    public class MyTest
+    {
+         public DataSourceResult GetList(String DataSourceID,String pageSize)
+        {
+            String OrderBy = String.Empty;
+            String SearchCondition = String.Empty;
+            int CurPage = 1;
+
+            //当前的排序
+            if (String.IsNullOrEmpty(System.Web.HttpContext.Current.Request.QueryString[DataSourceID + "OrderBy"]) == false)
+            {
+                OrderBy = System.Web.HttpContext.Current.Request.QueryString[DataSourceID + "OrderBy"];
+            }
+
+            //当前查询条件
+            if (String.IsNullOrEmpty(System.Web.HttpContext.Current.Request.QueryString[DataSourceID + "SearchCondition"]) == false)
+            {
+                SearchCondition = System.Web.HttpContext.Current.Request.QueryString[DataSourceID + "SearchCondition"];
+            }
+
+            //当前页
+            if (String.IsNullOrEmpty(System.Web.HttpContext.Current.Request.QueryString[DataSourceID + "CurPage"]) == false)
+            {
+                String CurPage1 = System.Web.HttpContext.Current.Request.QueryString[DataSourceID + "CurPage"];
+                if (WebFrame.Util.JValidator.IsInt(CurPage1))
+                {
+                    CurPage = int.Parse(CurPage1);
+                }
+            }
+            /*----------自己的业务处理代码-------------------------------------*/
+            int totalRow = 0;
+            JTable tab1 = new JTable(TableName);
+            tab1.PageSize = int.Parse(pageSize);
+            if (String.IsNullOrEmpty(OrderBy) == false)
+            {
+                tab1.OrderBy = OrderBy;
+            }
+            List<SearchField> condition = new List<SearchField>();
+            if (String.IsNullOrEmpty(SearchCondition) == false)
+            {
+                condition.Add(new SearchField(SearchCondition, "", SearchOperator.UserDefine));
+            }
+            DataSet ds1 = tab1.SearchData(condition, CurPage, "*");
+            totalRow = tab1.GetTotalRow();
+            tab1.Close();
+
+            //业务代码处理结束后，返回的结果
+            DataSourceResult da1 = new DataSourceResult();
+            da1.DataTable = ds1.Tables[0];
+            da1.CurPage = CurPage;
+            da1.TotalRow =totalRow;
+
+            return da1;
+        }
+    }
+}
